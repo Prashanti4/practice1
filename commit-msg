@@ -1,0 +1,10 @@
+#!/bin/bash
+
+MSG=$(cat "$1")
+
+if [[ ! "$MSG" =~ ^JIRA-[0-9]+ ]]; then
+  echo "❌ Commit blocked"
+  echo "Commit message must start with JIRA-123"
+  exit 1
+fi
+
