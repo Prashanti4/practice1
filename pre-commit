@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if grep -R "TODO" .; then
+  echo "❌ Commit blocked: TODO found"
+  exit 1
+fi
+
